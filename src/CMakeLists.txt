@@ -1,0 +1,26 @@
+SET(ROOT ${PATH_SRC})
+SET(EXECUTABLE_NAME "ultrapong")
+
+SET(SOURCES
+	${ROOT}/main.cpp
+	${ROOT}/Ball.cpp
+	${ROOT}/Collisions.cpp
+	${ROOT}/Entity.cpp
+	${ROOT}/Game.cpp
+	${ROOT}/Goal.cpp
+	${ROOT}/Player.cpp
+	${ROOT}/Randomizer.cpp
+	${ROOT}/ResourcePath.mm
+	${ROOT}/Utils.cpp
+)
+
+ADD_EXECUTABLE(${EXECUTABLE_NAME} MACOSX_BUNDLE ${SOURCES})
+
+# Link with SFML
+FIND_PACKAGE(SFML 2 COMPONENTS audio graphics window system REQUIRED)
+TARGET_LINK_LIBRARIES(${EXECUTABLE_NAME} ${SFML_LIBRARIES})
+INCLUDE_DIRECTORIES(${SFML_INCLUDE_DIR})
+
+# Link with Cocoa
+FIND_LIBRARY(COCOA_LIBRARY Cocoa)
+TARGET_LINK_LIBRARIES(${EXECUTABLE_NAME} ${COCOA_LIBRARY})
