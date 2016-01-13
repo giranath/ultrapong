@@ -5,7 +5,7 @@ The game was made in one week of spare time in 2013. The source code has not cha
 to preserve it's initial state. I only adjust some things to be able to compile the project
 in today's compilers.
 
-![alt tag](http://imgur.com/DBvkFqg)
+![alt tag](http://imgur.com/DBvkFqg.gifv)
 
 # How to compile?
 To compile _Ultrapong_, you need these tools/libraries:
